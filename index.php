@@ -1,34 +1,30 @@
 <?php
-//déclaration des 2 variables avec les valeur
-$object = 'Réunion';
-$message = 'Bonjour, nous allons faire le point sur les chiffres en cours.';
+$number1 = 30;
+$number2 = 30;
+function comparaison($number1para, $number2para)
+{
+  if ($number1para < $number2para) {
+    $message = 'Le premier nombre est plus petit';
+  } elseif ($number1para > $number2para){
+    $message = 'Le premier nombre est plus grand';
+  } else {
+    $message = 'Les deux nombres sont identiques';
+  }
+  return $message;
+}
 ?>
-
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
-
 <head>
   <meta charset="utf-8"/>
   <link rel="stylesheet" href="assets/css/style.css"/>
-  <title>Partie 1 exo 1</title>
+  <title>Partie 4 exo 3</title>
 </head>
-
 <body>
-
-  <p>Objet :
-    <?php
-    //j'affiche avec echo la variable sur mon navigateur de l'objet
-    echo $object;
-    ?>
-  </p>
-
-
-  <p>
-    <?php
-      //j'affiche avec echo la variable du message sur mon navigateur
-    echo $message;
-    ?>
-  </p>
-
+  <?php
+// si on affiche le paramètre
+// echo de la variable
+  $result = comparaison($number1,$number2); ?>
+  <p> <?php echo $result;?> </p>
 </body>
 </html>
